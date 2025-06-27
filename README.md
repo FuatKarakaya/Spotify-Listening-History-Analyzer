@@ -44,3 +44,29 @@ In your terminal:
 
 ```bash
 node analyze.js
+```
+
+## Usage: `printTopSongs` & `printTopArtists`
+
+At the bottom of your `analyze.js`, you can call these functions with different parameters to get exactly the stats you want.
+
+### `printTopSongs(sortBy, startDate, endDate, limit)`
+
+- **`sortBy`**: `"count"` (play count) or `"duration"` (total listening time)  
+- **`startDate`**, **`endDate`**: ISO-formatted strings (e.g. `"2024-01-01T00:00:00Z"`), or `null` for unbounded  
+- **`limit`**: Number of top items to display (default: `20`)
+
+```js
+// EXAMPLES
+console.log("\n=== Songs by Count (Last 12 Months) ===");
+printTopSongs("count", "2024-06-27T00:00:00Z", "2025-06-27T00:00:00Z", 50);
+
+console.log("\n=== Songs by Duration (All Time) ===");
+printTopSongs("duration", null, null, 30);
+
+console.log("\n=== Artists by Duration (After 2024-11-29) ===");
+printTopArtists("duration", "2024-11-29T00:00:00Z", null, 20);
+
+console.log("\n=== Artists by Count (2024 only) ===");
+printTopArtists("count", "2024-01-01T00:00:00Z", "2024-12-31T23:59:59Z", 20);
+
