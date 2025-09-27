@@ -29,13 +29,13 @@ A simple, flexible Node.js tool to analyze your full Spotify listening history d
 
 Place your JSON files into a folder called `spotify_data`, like this:
 
-spotify-analyzer/
-├── analyze.js
-├── README.md
-├── spotify_data/
-│ ├── Streaming_History_Audio_2023_0.json
-│ ├── Streaming_History_Audio_2024_1.json
-│ └── ...
+spotify-analyzer/  
+├── analyze.js  
+├── README.md  
+├── spotify_data/  
+│ ├── Streaming_History_Audio_2023_0.json  
+│ ├── Streaming_History_Audio_2024_1.json  
+│ └── ...  
 
 
 ### 4. **Run the script**
